@@ -1,0 +1,4 @@
+Demo Application made with Spring boot
+Run via CMD
+...\demo\target>java -jar demo-0.0.1-SNAPSHOT.jar
+
