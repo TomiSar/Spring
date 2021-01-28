@@ -1,0 +1,59 @@
+Setup
+- Install a database MariaDB or MySQL
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqld --install
+Service successfully installed.
+
+- Create database
+cmd:/ mysql -u root -p
+password: *********
+
+mysql> create database friends;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use friends;
+Database changed
+mysql> CREATE TABLE friend (
+    -> id int NOT NULL AUTO_INCREMENT,
+    -> first_name varchar(255),
+    -> last_name varchar(255),
+    -> PRIMARY KEY (id)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> describe friend;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int          | NO   | PRI | NULL    | auto_increment |
+| first_name | varchar(255) | YES  |     | NULL    |                |
+| last_name  | varchar(255) | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> insert into friend values(null, 'Chuck', 'Norris');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into friend values(null, 'Steven', 'Seagal');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from friend;
++----+------------+-----------+
+| id | first_name | last_name |
++----+------------+-----------+
+|  1 | Chuck      | Norris    |
+|  2 | Steven     | Seagal    |
++----+------------+-----------+
+2 rows in set (0.00 sec)
+
+
+- Genarate a projects with Spring Initializr --> https://start.spring.io/
+
+- jaxb-api maven package --> add to pom.xml
+
+- Configure the database in application.properties
+
+-Implement the Architecture
+	model.Friend
+	service.FriendService		--> services
+	controller.FriendController --> controllers
+	
