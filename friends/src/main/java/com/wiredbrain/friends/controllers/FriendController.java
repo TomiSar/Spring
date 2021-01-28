@@ -11,6 +11,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import javax.validation.ValidationException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -50,6 +51,11 @@ public class FriendController {
     @DeleteMapping("/friend/{id}")
     void delete(@PathVariable Integer id) {
         friendService.deleteById(id);
+    }
+
+    @GetMapping("/wrong")
+    Friend somethingIsWrong() {
+        throw new ValidationException("Something is wrong");
     }
 }
 
