@@ -1,3 +1,7 @@
+MySQL :  localhost:3306
+user  :	 root
+MySQL :  mysqladmin
+
 Setup
 - Install a database MariaDB or MySQL
 C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqld --install
