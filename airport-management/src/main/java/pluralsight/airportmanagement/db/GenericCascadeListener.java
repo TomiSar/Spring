@@ -30,4 +30,3 @@ public class GenericCascadeListener extends AbstractMongoEventListener<Object> {
         });
     }
 }
-

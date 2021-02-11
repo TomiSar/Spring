@@ -7,4 +7,3 @@ import pluralsight.airportmanagement.domain.Airport;
 @Repository
 public interface AirportRepository extends MongoRepository<Airport, String> {
 }
-

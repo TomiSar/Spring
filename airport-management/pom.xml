@@ -19,6 +19,7 @@
     </properties>
 
     <dependencies>
+
         <!-- spring boot starter -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -29,6 +30,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
+        <!-- mongobee -->
+        <dependency>
+            <groupId>com.github.mongobee</groupId>
+            <artifactId>mongobee</artifactId>
+            <version>0.13</version>
         </dependency>
 
         <dependency>
